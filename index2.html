@@ -1,0 +1,66 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .float-animation {
+            animation: float 2s ease-in-out infinite;
+        }
+
+        .float-animation-delay {
+            animation: float 2s ease-in-out infinite;
+            animation-delay: 1.5s;
+        }
+
+        .square-pattern {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 0.5px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 0.5px);
+            background-size: 20px 20px;
+            border-radius: 50%;
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 10%;
+            right: 10%;
+            transform: translate(50%, -50%);
+        }
+
+    </style>
+</head>
+<body class="bg-gradient-to-r from-purple-700 via-purple-600 to-blue-500 min-h-screen flex items-center justify-center">
+    <div class="square-pattern">
+    </div>
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+        <div class="text-white md:w-1/2">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                AI Automation:<br>Elevating Team Efficiency<br>and Scalability
+            </h1>
+            <button class="bg-purple-700 hover:bg-purple-800 text-white font-semibold py-2 px-4 rounded mt-4">
+                Get Your Free Guide
+                <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+        <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center relative">
+            <img alt="Front Card" 
+            class="w-64 h-auto rounded-lg shadow-lg z-10 float-animation" 
+            src="https://images.pexels.com/photos/8438979/pexels-photo-8438979.jpeg?auto=compress&cs=tinysrgb&w=600" />
+
+            <img alt="Back Card" 
+            class="absolute top-0 right-1 w-48 h-auto rounded-lg shadow-lg transform translate-x-12 -translate-y-12 z-0 float-animation-delay" 
+            src="https://images.pexels.com/photos/8000527/pexels-photo-8000527.jpeg?auto=compress&cs=tinysrgb&w=600" />
+        </div>
+    </div>
+</body>
+</html>

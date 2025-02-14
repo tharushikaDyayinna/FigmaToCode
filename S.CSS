@@ -1,0 +1,70 @@
+body {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	
+	background:radial-gradient(circle at top left, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0)),
+                  radial-gradient(circle at top right, rgba(0, 102, 255, 0.3), rgba(0, 0, 0, 0)),
+                  linear-gradient(to bottom, #AAB7FF, #001244) ;
+	background-blend-mode: overlay;
+}
+
+.square-pattern {
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 0.5px),
+					  linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 0.5px);
+	background-size: 50px 50px;
+	border-radius: 50%;
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	top: 20%;
+	right: 10%;
+	transform: translate(50%, -50%);
+}
+
+
+.container {
+	text-align: center;
+}
+.heading {
+	font-size: 48px;
+	font-weight: bold;
+	color: white;
+	margin-bottom: 32px;
+	text-align: center;
+}
+@media (min-width: 768px) {
+	.heading {
+		font-size: 64px;
+	}
+}
+@media (min-width: 1024px) {
+	.heading {
+		font-size: 80px;
+	}
+}
+.button {
+	background: #e10661;
+	color: white;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 8px 24px;
+	border-radius: 10px;
+	transition: background 0.3s ease;
+}
+@media (min-width: 768px) {
+	.button {
+		font-size: 20px;
+	}
+}
+@media (min-width: 1024px) {
+	.button {
+		font-size: 24px;
+	}
+}
+.button:hover {
+	background: #e10661;
+
+}
